@@ -1,9 +1,8 @@
-﻿//Cargar datos en la tablacuando los documentes esten listos
+﻿// Cargar datos 
 $(document).ready(function (){
     loadData();
 });
 
-//Funcion cargar datos
 function loadData() {
     $.ajax({
         url: "/Home/List",
@@ -31,7 +30,7 @@ function loadData() {
     });
 }
 
-//Funcion Agregar Datos
+//Funcion Añadir Datos
 function Add() {
     var res = validate();
     if (res == false) {
@@ -89,7 +88,7 @@ function getbyID(EmpID) {
     return false;
 }
 
-//Funcion para actualizar un registro del empleado
+//Funcion para actualizar registros del empleado
 function Update() {
     var res = validate();
     if (res == false) {
@@ -124,7 +123,7 @@ function Update() {
         }
     });
 }
-//
+// Para borrar
 function Delete(ID) {
     var ans = confirm("Are you sure you want to delete this Record?");
     if (ans) {
